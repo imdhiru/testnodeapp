@@ -105,7 +105,7 @@ const a =  [
       "Certificates_Count": "668"
   }
   ];
-app.get('/', (req,res) => {
+app.get('/cert', (req,res) => {
     res.send(a);
     
        
