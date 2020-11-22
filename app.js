@@ -1,9 +1,8 @@
 const express = require('express');
 const app = express();
-const cors = reqire("cors");
 const Joi = require('@hapi/joi');
 const movies = require('./movies');
-app.use(cors())
+
 app.use(function(req, res, next){
     res.setHeader('Content-Range', 'posts 0-20/20');
     next();
