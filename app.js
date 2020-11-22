@@ -14,10 +14,10 @@ app.get('/cert', (req,res) => {
 app.get('/users', (req,res) => {
     res.send('Sudhir, Welcome to Daily Code Buffer in Heroku Auto Deployment!!');
 });
-=======
+
 app.get('/', (req,res) => {
     res.send('Sudhir Welcome to Daily Code Buffer in Heroku Auto Deployment!!');
-})
+});
 
 
 
