@@ -2,12 +2,12 @@ const express = require('express');
 const app = express();
 const Joi = require('@hapi/joi');
 const movies = require('./movies');
-
-app.use(express.json());
 app.use(function(req, res, next){
-    res.header('Content-Range', 'posts 0-20/20')
-    next()
+    res.header('Content-Range', 'posts 0-20/20');
+    next();
   });
+app.use(express.json());
+
 const a = [{
     "id": "1",
     "First_And_Last_name": "C Pal",
