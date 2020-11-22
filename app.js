@@ -101,9 +101,31 @@ const a = [{
     "Certificates_Count": "668"
 }];
 const b = JSON.stringify(a);
-app.use('/abc', movies);
 
-app.get('/cert', (req,res) => {
+
+const c =  [
+    {
+      "id": "1",
+      "name": "Johnny sharma",
+      "email": "john@globalsign.com"
+    },
+    {
+      "id": "2",
+      "name": "Vivek sharma",
+      "email": "vivek.sharma@globalsign.com"
+    },
+    {
+      "name": "Sudhir kumar",
+      "email": "Sudhir.Kumar@globalsign.com",
+      "id": "suel_ht"
+    }
+  ];
+  const d = JSON.stringify(c);
+app.use('/abc', movies);
+app.get('/users', (req,res) => {
+    res.send(d);   
+});
+app.get('/certificates', (req,res) => {
     res.send(b);   
 });
 
