@@ -111,9 +111,17 @@ app.get('/cert', (req,res) => {
        
 });
 
+<<<<<<< HEAD
 app.get('/users', (req,res) => {
     res.send('Sudhir, Welcome to Daily Code Buffer in Heroku Auto Deployment!!');
 });
+=======
+app.get('/', (req,res) => {
+    res.send('Sudhir Welcome to Daily Code Buffer in Heroku Auto Deployment!!');
+})
+
+
+>>>>>>> a7d329c4957ca3bcd220654891fbf2203e264b0e
 
 
 
