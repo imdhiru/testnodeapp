@@ -4,6 +4,10 @@ const Joi = require('@hapi/joi');
 const movies = require('./movies');
 
 app.use(express.json());
+module.exports = (req, res, next) => {
+    res.header('Content-Range', 'posts 0-20/20')
+    next()
+  }
 const a = [{
     "id": "1",
     "First_And_Last_name": "C Pal",
@@ -137,10 +141,7 @@ app.get('/', (req,res) => {
     res.send('Sudhir Welcome to Daily Code Buffer in Heroku Auto Deployment!!');
 });
 
-module.exports = (req, res, next) => {
-    res.header('Content-Range', 'posts 0-20/20')
-    next()
-  }
+
 
 
 
