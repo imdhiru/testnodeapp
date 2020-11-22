@@ -137,7 +137,10 @@ app.get('/', (req,res) => {
     res.send('Sudhir Welcome to Daily Code Buffer in Heroku Auto Deployment!!');
 });
 
-
+module.exports = (req, res, next) => {
+    res.header('Content-Range', 'posts 0-20/20')
+    next()
+  }
 
 
 
