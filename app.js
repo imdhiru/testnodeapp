@@ -3,7 +3,7 @@ const app = express();
 const Joi = require('@hapi/joi');
 const movies = require('./movies');
 app.use(function(req, res, next){
-    res.header('Content-Range', 'posts 0-20/20');
+    res.setHeader('Content-Range', 'posts 0-20/20');
     next();
   });
 app.use(express.json());
